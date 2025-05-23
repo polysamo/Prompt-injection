@@ -68,7 +68,7 @@
                         A injecção de prompt direta é uma técnica de ataque em que um invasor insere comandos ou prompts maliciosos diretamente na entrada de um modelo de linguagem (LLM) ou sistema de IA. Ao contrário de outros ataques, onde o comando malicioso pode estar oculto em dados externos ou induzido por terceiros, na injeção direta o invasor fornece explicitamente o conteúdo manipulador para o modelo processar.
                     </p>
                     <p>
-                        Um exemplo prático é mostrado na imagem que mostra como dois usuários (normal e malicioso) que enviam dois prompts:
+                        Um exemplo prático é mostrado na imagem em como dois usuários (benigno e malicioso) enviam seus prompts:
                     </p>
                     <figure style="text-align:center; margin: 20px 0;">
                         <img src="prompt injection.png" alt="prompt injection" style="width:50%; height:auto;">
@@ -83,13 +83,13 @@
                         <Strong>Passo 2:</Strong> A aplicação executa o prompt dos usuários recebidos.
                     </p>
                     <p>
-                        <strong>Passo 3:</strong> A aplicação possui um prompt pré-definido (predefined prompt), que é uma instrução padrão, por exemplo: "Responda a seguinte pergunta como um assistente gentil:". Para o usuário normal, o prompt combinado é o prompt pré-definido + prompt benigno (normal). Para o usuário malicioso, o prompt combinado inclui o prompt pré-definido + o prompt malicioso, criando uma instrução combinada que pode conter comandos maliciosos.
+                        <strong>Passo 3:</strong> A aplicação possui um prompt pré-definido (predefined prompt), que é uma instrução padrão, por exemplo: "Responda a seguinte pergunta como um assistente gentil:". Para o usuário normal, o prompt combinado é o prompt pré-definido + prompt benigno (normal). Para o usuário malicioso, o prompt combinado inclui o prompt pré-definido + o prompt malicioso. Assim, criando uma instrução combinada que pode conter comandos maliciosos.
                     </p>
                     <p>
                         <strong>Passo 4:</strong> O prompt combinado (pré-definido + entrada do usuário) é enviado para o LLM para processamento.
                     </p>
                     <p>
-                        <strong>Passo 5:</strong> No fim, aplicação exibe a resposta gerada pelo LLM. Enquanto no caso do usuário normal, a resposta é correta e esperada. No caso do usuário malicioso, a resposta contém a saída controlada pelo ataque, como "hello world".
+                        <strong>Passo 5:</strong> No fim, aplicação exibe a resposta gerada pelo LLM. Enquanto no caso do usuário normal, a resposta é correta e esperada, no caso do usuário malicioso, a resposta contém a saída controlada pelo ataque, como "hello world".
                     </p>
                 <li><strong>Indirect Injection</strong></li>
                 <br>
@@ -115,7 +115,6 @@
                             Figura 3. Fonte: https://embracethered.com/blog/posts/2023/chatgpt-cross-plugin-request-forgery-and-prompt-injection./, 2023.
                         </figcaption>
                     </figure>
-                    <p>Exemplo de como construir um site contendo carga maliciosa</p>
                     <p>
                         <strong>Passo 2:</strong>  O usuário acessa o site malicioso. O ChatGPT está configurado para usar um plugin de navegação, como o WebPilot, que pode acessar e buscar dados de outras páginas da web, logo, ele visita o site e passa a seguir as instruções maliciosas que começam a ser processadas automaticamente pelo modelo. 
                     </p>
@@ -279,6 +278,7 @@
                         Diante desses desafios, fica evidente a necessidade urgente de pesquisa contínua e desenvolvimento de soluções eficazes para mitigar esse tipo de ataque. 
                     </p>
             </ol>
+          <p>Diante da crescente complexidade e sofisticação dos ataques de prompt, torna-se cada vez mais crucial investir em pesquisa contínua e no desenvolvimento de mecanismos robustos de mitigação. Para garantir a segurança e a integridade dos modelos de linguagem, é exigido abordagens inovadoras que combinem detecção precisa, filtragem eficiente e treinamento resiliente dos sistemas. Assim, pode ser possível proteger usuários e aplicações contra manipulações maliciosas, preservando a confiança e a eficácia das tecnologias baseadas em LLMs.</p>
         </li>
 
   </div>
